@@ -1,0 +1,386 @@
+body {  
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Code Pro', monospace;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 3.5rem;
+  line-height: 1.5; 
+}
+
+.blue {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: #74ebd5;  
+  font-weight: bold; 
+}
+
+.blue1 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.6rem;
+  line-height: 1;
+  color: #74ebd5;  
+  /* font-weight: bold; */ 
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.content {
+  padding-top: 12%;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 1% 10%;
+}
+
+/* Sections */
+
+.colored-section { 
+  background-color: #353538;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff; 
+  color: #8f8f8f; 
+}
+
+.grey-section {   
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab); /*  Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  color: #fff;
+}
+
+.more-section {
+  background-color: #eef2f3;  
+}
+
+/* ******* NAVIGATION BAR ****** */
+
+.navbar {   
+  position: fixed;  
+  top: 0; 
+  background: #000; 
+}
+
+.nav-item {
+  padding: 0 15px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";  
+}
+
+.navbar.scrolled {
+  background: rgb(8, 8, 8);  
+  transition: background 500ms;
+}
+
+/* Flags navbar */
+
+#flags .nav-item {
+  padding: 0 4px;
+}
+
+ .active img {	
+	border: 2px solid #f5ba13;;
+  padding: 0 7px ;  
+}
+
+.nav-link img {  
+  width: 85%;
+  opacity: 0.7;
+}
+
+
+/* ****** TITLE SECTION ****** */
+
+#title {   
+  height: 650px; 
+ /* height: 100vh;  */
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)),
+  url("nasa-Q1p7bh3SHj8-unsplash.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  color: #fff;
+  text-align: left;  
+}
+
+#title .container-fluid { 
+  padding: 3% 15% 7%;  
+  height:100vh;
+}
+
+#logos div {
+  display: inline-block;  
+  
+}
+
+.logo {
+  margin-top: 100px;
+  height: 75px;
+  width: auto;  
+  box-shadow: 2px 2px 25px rgb(250, 249, 188);
+  }
+
+#practical {
+  margin-top: 100px;
+  height: 70px;
+  width: auto;  
+  box-shadow: 2px 2px 20px rgb(250, 249, 188); 
+}
+
+
+/* Multi slide carousel */
+
+.slider {
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* set up slide-track */
+
+.slide-track {
+  display: flex;
+  width: calc(150px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-150px * 11));
+  }
+  /* move the slide leftwards (-150px) by half (18 images/2=9) of its width  */
+}
+
+.slide {
+  height: 100px;
+  width: 150px;
+  display: flex;  
+  padding: 12px;
+  perspective: 100px;
+}
+
+img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+
+img:hover {
+  transform: translateZ(20px);
+}
+
+/* gradient shadows */
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255,255,255,1)0%, rgba(255,255,255,0)100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/* ****** ABOUT ME SECTION ***** */
+
+#about {  
+  padding: 8% 15% 1%;  
+}
+
+#about p {
+  text-align: justify;
+}
+
+/* ****** PORTFOLIO SECTION ****** */
+
+#portfolio {
+  padding: 100px 210px;
+}
+
+.portfolio-text {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+ #blog {
+  background: url('blog.png');
+  background-size: cover;  
+ }
+  
+
+ #dona {
+  background: url('dona3.png')  fixed center;
+  background-size: cover; 
+  background-position: 52% 50%; 
+ }
+
+ #grow {
+  background: url('gyf.jpg')  fixed center;
+  background-size: cover;  
+  background-position: top center;
+ }
+
+ #challenges {
+  background: url('challenges.png')  fixed center;
+  background-size: cover;  
+  background-position: top center;
+ }
+
+/* HOVER EFFECT */
+/* This is the holding container */
+.container{
+  padding: 0;
+  position: relative;
+  display: block;
+  width: 380px;
+  height: 380px;
+  background: #000;  
+  background-size: cover;
+  margin: 30px auto;
+  border-radius: 12px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+ }
+
+ 
+  /* This is the internal container that shows on hover */
+  .hoverdiv{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    background: rgba(0,0,0,0.9);
+    color: #fff;    
+    opacity: 0;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.3s;
+    box-sizing: border-box;
+   }
+
+   .icon span {
+    float: left; 
+    text-align:center;
+    display:block;   
+    background-color: rgba(255,255, 255, 0.7); 
+    border-radius: 8px;      
+    margin-left: 12px;
+    padding: 8px;
+   }
+
+      
+   /* This is the main line of code that targets the internal container */
+   .container:hover .hoverdiv, .container:active .hoverdiv{   
+    opacity: 1;
+   }
+
+   .container:hover{
+    transform: scale(1.03);
+   }
+  
+/* CTA Section */
+
+/* Button */
+
+#cta a {
+  padding: 12px 60px;
+  border-radius: 42px;
+  background: #1CD8D2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  border: 1px solid #1CD8D2;
+}
+
+#cta a:hover {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+
+/* FOOTER SECTION */
+
+
+.social-icon {
+  margin: 20px 15px;
+  color: white;
+  font-size: 2rem;
+  /* text-decoration: none; */
+}
+
+.social-icon:hover {
+  color: orange;
+}
+
+.icons { 
+  color: #8f8f8f;
+  font-size: 10px;
+}
+
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+
+  #portfolio {
+    padding: 100px 0;
+  }  
+  
+  .nav-link img {
+    width: 10%;    
+  }
+  
+}
